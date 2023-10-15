@@ -1,11 +1,15 @@
 from aiogram import Bot, Dispatcher
 from core.handlers import get_start_handler
 from core.settings import get_settings
-from core.handlers import faq_handler,questions_handler, program_handler
+from core.handlers import faq_handler,questions_handler, program_handler, tomorrow_handler, conference_today_handler
 import asyncio
 import logging
+from core.utils.commands import set_commands
+from aiogram.filters import Command
+
 
 async def start_bot(bot: Bot):
+    await set_commands(bot)
     await bot.send_message(get_settings.bots.admin_id, text="Bot is start")
 
 async def stop_bot(bot: Bot):
@@ -17,7 +21,9 @@ async def start():
                                "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
     bot = Bot(token=get_settings.bots.bot_token, parse_mode='HTML')
     dp = Dispatcher()
-    dp.message.register(get_start_handler.get_start)
+    dp.message.register(get_start_handler.get_start, Command("start"))
+    dp.message.register(tomorrow_handler.send_conference_tomorrow, Command("send_message1"))
+    dp.message.register(conference_today_handler.send_today_conference, Command("send_message2"))
     dp.callback_query.register(get_start_handler.get_start, lambda c: c.data == "click_back_in_main_menu")
     dp.callback_query.register(questions_handler.question_1, lambda c: c.data == "question_1")
     dp.callback_query.register(questions_handler.question_2, lambda c: c.data == "question_2")

@@ -7,6 +7,14 @@ async def set_commands(bot: Bot):
         BotCommand(
             command='start',
             description='Нажмите для старта бота'
+        ),
+        BotCommand(
+            command='send_message1',
+            description="Завтра мероприятие. Ждём вас!"
+        ),
+        BotCommand(
+            command='send_message2',
+            description="Отправить 13 декабря в 9 часов по МСК"
         )
     ]
 
