@@ -9,3 +9,4 @@ async def get_start(message: Message, bot: Bot ):
                                                   f"Ниже вы можете ознакомиться с программой мероприятия "
                                                   f"или посмотреть ответы на часто задаваемые вопросы."),
                                                     reply_markup=select_FAC)
+
