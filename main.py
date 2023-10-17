@@ -1,4 +1,6 @@
 from aiogram import Bot, Dispatcher
+from aiogram.types import message
+
 from core.handlers import get_start_handler
 from core.settings import get_settings
 from core.handlers import (faq_handler,
@@ -14,6 +16,8 @@ from core.utils.commands import set_commands
 from aiogram.filters import Command
 
 
+
+logger = logging.getLogger(__name__)
 async def start_bot(bot: Bot):
     await set_commands(bot)
     await bot.send_message(get_settings.bots.admin_id, text="Bot is start")
