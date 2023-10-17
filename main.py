@@ -44,7 +44,7 @@ async def start():
     dp.callback_query.register(sessions_handler.choice_time_12, lambda c: c.data == "12")
     dp.callback_query.register(sessions_handler.choice_time_15, lambda c: c.data == "15")
     dp.callback_query.register(program_handler.view_program_13_dec, lambda c: c.data == "click_program_13_dec")
-    dp.callback_query.register(sessions_handler.choice_session, lambda c: c.data == "sessions" or c.data == "back_on_sessions_time")
+    dp.callback_query.register(sessions_handler.choice_session, lambda c: c.data == "sessions" or c.data == "back_on_session_timegit rm --cached .gitignore")
     dp.callback_query.register(conference_today_handler.send_today_conference_callback,
                                lambda c: c.data == "back_on_message_13_dec")
 
