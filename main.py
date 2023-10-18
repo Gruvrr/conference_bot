@@ -1,6 +1,4 @@
 from aiogram import Bot, Dispatcher
-from aiogram.types import message
-
 from core.handlers import get_start_handler
 from core.settings import get_settings
 from core.handlers import (faq_handler,
@@ -9,15 +7,16 @@ from core.handlers import (faq_handler,
                            tomorrow_handler,
                            conference_today_handler,
                            sessions_handler)
-
 import asyncio
 import logging
 from core.utils.commands import set_commands
 from aiogram.filters import Command
 
 
-
+dp = Dispatcher()
 logger = logging.getLogger(__name__)
+
+
 async def start_bot(bot: Bot):
     await set_commands(bot)
     await bot.send_message(get_settings.bots.admin_id, text="Bot is start")
@@ -32,7 +31,6 @@ async def start():
                         format="%(asctime)s - [%(levelname)s] = %(name)s - "
                                "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
     bot = Bot(token=get_settings.bots.bot_token, parse_mode='HTML')
-    dp = Dispatcher()
     dp.message.register(get_start_handler.get_start, Command("start"))
     dp.message.register(tomorrow_handler.send_conference_tomorrow, Command("send_message1"))
     dp.message.register(conference_today_handler.send_today_conference_message, Command("send_message2"))
@@ -48,11 +46,10 @@ async def start():
     dp.callback_query.register(sessions_handler.choice_time_12, lambda c: c.data == "12")
     dp.callback_query.register(sessions_handler.choice_time_15, lambda c: c.data == "15")
     dp.callback_query.register(program_handler.view_program_13_dec, lambda c: c.data == "click_program_13_dec")
-    dp.callback_query.register(sessions_handler.choice_session, lambda c: c.data == "sessions" or c.data == "back_on_session_timegit rm --cached .gitignore")
+    dp.callback_query.register(sessions_handler.choice_session, lambda c: c.data == "sessions" or
+                                                                          c.data == "back_on_session_time")
     dp.callback_query.register(conference_today_handler.send_today_conference_callback,
                                lambda c: c.data == "back_on_message_13_dec")
-
-
     dp.callback_query.register(faq_handler.btn_fac_click, lambda c: c.data == "btn_fac_click" or c.data == "click_back")
 
     dp.startup.register(start_bot)

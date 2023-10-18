@@ -17,12 +17,14 @@ async def get_start(message: Message, bot: Bot):
         )
         print(f"[INFO] connection good")
         with connection.cursor() as cursor:
-            cursor.execute(
-                f"""INSERT INTO users (user_id, username, first_name, last_name) VALUES (%s, %s, %s, %s)""",
-                (message.from_user.id, message.from_user.username, message.from_user.first_name, message.from_user.last_name)
-            )
-            connection.commit()
-            print(f"[INFO] Данные успешно добавлены")
+            cursor.execute("SELECT user_id FROM users WHERE user_id = %s", (message.from_user.id,))
+            if not cursor.fetchone():
+                cursor.execute(
+                    f"""INSERT INTO users (user_id, username, first_name, last_name) VALUES (%s, %s, %s, %s)""",
+                    (message.from_user.id, message.from_user.username, message.from_user.first_name, message.from_user.last_name)
+                )
+                connection.commit()
+                print(f"[INFO] Данные успешно добавлены")
         await bot.send_message(message.from_user.id, (f"Здравствуйте, {message.from_user.first_name}.\n"
                                                       f"Благодарим за регистрацию на мероприятие!\n\n"
                                                       f"Ниже вы можете ознакомиться с программой мероприятия "

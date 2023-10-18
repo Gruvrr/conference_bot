@@ -11,13 +11,5 @@ async def set_commands(bot: Bot):
             command='start',
             description='Нажмите для старта бота'
         ),
-        # BotCommand(
-        #     command='send_message1',
-        #     description="Завтра мероприятие. Ждём вас!"
-        # ),
-        # BotCommand(
-        #     command='send_message2',
-        #     description="Отправить 13 декабря в 9 часов по МСК"
-        # )
     ]
     await bot.set_my_commands(commands, BotCommandScopeDefault())
