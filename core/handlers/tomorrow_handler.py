@@ -5,8 +5,9 @@ from core.settings import db_settings
 from aiogram import Bot
 
 
-async def send_conference_tomorrow(message: Message, bot: Bot):
+async def send_conference_tomorrow(bot: Bot):
     connection = None
+    admin_id = int(settings.get_settings.bots.admin_id)
     try:
         connection = psycopg2.connect(
             host=db_settings.host,
@@ -19,10 +20,6 @@ async def send_conference_tomorrow(message: Message, bot: Bot):
             cursor.execute("""SELECT user_id FROM users""")
             users = cursor.fetchall()
 
-            if int(message.from_user.id) != int(settings.get_settings.bots.admin_id):
-                await message.answer(text="У вас нет прав использовать эту команду")
-                return
-
             sent_count = 0
             for user in users:
                 user_id = user[0]
@@ -32,7 +29,7 @@ async def send_conference_tomorrow(message: Message, bot: Bot):
                 except Exception as e:
                     print(f"Failed to send message to user_id {user_id}. Error: {e}")
 
-            await message.answer(text=f"Уведомления успешно отправлены! Отправлено сообщений: {sent_count}")
+            await bot.send_message(admin_id, text=f"Уведомления успешно отправлены! Отправлено сообщений: {sent_count}")
 
     except Exception as _ex:
         print(["[INFO] Error exception ", _ex])
