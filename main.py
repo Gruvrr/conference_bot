@@ -6,7 +6,9 @@ from core.handlers import (faq_handler,
                            program_handler,
                            tomorrow_handler,
                            conference_today_handler,
-                           sessions_handler)
+                           sessions_handler,
+                           session_text10,
+                           session_text12)
 import asyncio
 import logging
 from core.utils.commands import set_commands
@@ -42,7 +44,6 @@ async def start():
     dp.callback_query.register(questions_handler.question_5, lambda c: c.data == "question_5")
     dp.callback_query.register(questions_handler.question_6, lambda c: c.data == "question_6")
     dp.callback_query.register(program_handler.view_program, lambda c: c.data == "click_program")
-    dp.callback_query.register(sessions_handler.choice_time_10, lambda c: c.data == "10")
     dp.callback_query.register(sessions_handler.choice_time_12, lambda c: c.data == "12")
     dp.callback_query.register(sessions_handler.choice_time_15, lambda c: c.data == "15")
     dp.callback_query.register(program_handler.view_program_13_dec, lambda c: c.data == "click_program_13_dec")
@@ -50,6 +51,8 @@ async def start():
                                                                           c.data == "back_on_session_time")
     dp.callback_query.register(conference_today_handler.send_today_conference_callback,
                                lambda c: c.data == "back_on_message_13_dec")
+    dp.include_routers(sessions_handler.router,
+                       session_text10.router, session_text12.router )
     dp.callback_query.register(faq_handler.btn_fac_click, lambda c: c.data == "btn_fac_click" or c.data == "click_back")
 
     dp.startup.register(start_bot)
