@@ -1,0 +1,24 @@
+2023-10-27 15:33:38,377 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-27 15:33:38,377 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-27 15:33:38,378 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-10-27 15:33:38,378 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-10-27 15:33:38,378 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-10-27 15:33:38,703 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-10-27 15:33:38,744 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @antonTest12345_bot id=6400599755 - 'Antontestbot'
+2023-10-27 15:33:45,984 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124158 is handled. Duration 208 ms by bot id=6400599755
+2023-10-27 15:33:49,677 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124159 is handled. Duration 132 ms by bot id=6400599755
+2023-10-27 15:33:52,646 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124160 is handled. Duration 126 ms by bot id=6400599755
+2023-10-27 15:33:57,577 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124161 is handled. Duration 117 ms by bot id=6400599755
+2023-10-27 15:34:01,068 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124162 is handled. Duration 186 ms by bot id=6400599755
+2023-10-27 15:34:02,287 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124163 is handled. Duration 137 ms by bot id=6400599755
+2023-10-27 15:34:03,601 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124164 is handled. Duration 209 ms by bot id=6400599755
+2023-10-27 15:34:05,123 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124165 is handled. Duration 327 ms by bot id=6400599755
+2023-10-27 15:34:06,413 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124166 is handled. Duration 173 ms by bot id=6400599755
+2023-10-27 15:34:07,812 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124167 is handled. Duration 166 ms by bot id=6400599755
+2023-10-27 15:34:09,076 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124168 is handled. Duration 170 ms by bot id=6400599755
+2023-10-27 15:34:12,931 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124169 is handled. Duration 139 ms by bot id=6400599755
+2023-10-27 15:34:13,898 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124170 is handled. Duration 128 ms by bot id=6400599755
+2023-10-27 15:34:14,786 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=703124171 is handled. Duration 196 ms by bot id=6400599755
+2023-10-27 15:34:17,365 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-10-27 15:34:17,366 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @antonTest12345_bot id=6400599755 - 'Antontestbot'
+2023-10-27 15:34:17,366 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped

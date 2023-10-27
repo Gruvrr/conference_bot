@@ -35,11 +35,13 @@ async def stop_bot(bot: Bot):
 async def start():
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s - [%(levelname)s] = %(name)s - "
-                               "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
+                               "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s",
+                        handlers=[logging.FileHandler("bot_logs.log", 'a', 'utf-8'),
+                                  logging.StreamHandler()])
     bot = Bot(token=get_settings.bots.bot_token, parse_mode='HTML')
     scheduler = AsyncIOScheduler(timezone="Europe/Belgrade")
-    scheduler.add_job(send_conference_tomorrow, trigger='cron', start_date=datetime(2023, 10, 27, 10, 30), kwargs={"bot": bot})
-    scheduler.add_job(send_today_conference_message, trigger='cron', start_date=datetime(2023, 10, 27, 11, 30), kwargs={"bot": bot})
+    scheduler.add_job(send_conference_tomorrow, trigger='cron', start_date=datetime(2023, 10, 28, 10, 30), kwargs={"bot": bot})
+    scheduler.add_job(send_today_conference_message, trigger='cron', start_date=datetime(2023, 10, 29, 9, 30), kwargs={"bot": bot})
     scheduler.start()
     dp.message.register(get_start_handler.get_start, Command("start"))
     dp.message.register(tomorrow_handler.send_conference_tomorrow, Command("send_message1"))
