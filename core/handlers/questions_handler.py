@@ -11,9 +11,10 @@ async def question_1(callback: CallbackQuery):
 
 async def question_2(callback: CallbackQuery):
     name = callback.from_user.first_name
-    await callback.message.answer(text=f"Добрый день, {name}! До 8 декабря на указанную при регистрации "
+    await callback.message.answer(text=f"Добрый день, {name}. C 8 по 12 декабря на указанную при регистрации "
                                        f"электронную почту Вам придет письмо-подтверждение.", reply_markup=back)
     await callback.answer()
+
 
 async def question_3(callback: CallbackQuery):
     name = callback.from_user.first_name
@@ -47,7 +48,7 @@ async def question_4(callback: CallbackQuery):
 async def question_5(callback: CallbackQuery):
     name = callback.from_user.first_name
     await callback.message.answer(text=f"Добрый день, {name}! \n"
-                                       f"Подробная информация об аккредитации СМИ представлена \n"
+                                       f"Подробная информация об аккредитации СМИ будет представлена \n"
                                        f"на сайте мероприятия: https://scienceplusbusiness.ru/ \n"
                                        f"в разделе «Пресс-центр».", reply_markup=back)
     await callback.answer()
