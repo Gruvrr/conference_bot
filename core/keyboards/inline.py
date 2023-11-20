@@ -7,7 +7,7 @@ select_FAC = InlineKeyboardMarkup(inline_keyboard=[
             callback_data="btn_fac_click"
         ),
         InlineKeyboardButton(
-            text="Программа мероприятия",
+            text="Программа",
             callback_data="click_program"
         )
     ]

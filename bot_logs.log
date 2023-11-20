@@ -666,3 +666,177 @@ TypeError: send_conference_tomorrow_manual() got multiple values for argument 'b
 2023-11-17 15:48:48,017 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGTERM signal
 2023-11-17 15:48:48,017 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
 2023-11-17 15:48:48,018 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 09:21:07,757 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 09:21:08,029 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 09:21:08,073 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 09:21:32,658 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990787 is handled. Duration 192 ms by bot id=6246024647
+2023-11-20 09:23:19,209 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990788 is handled. Duration 216 ms by bot id=6246024647
+2023-11-20 09:24:12,430 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990789 is handled. Duration 263 ms by bot id=6246024647
+2023-11-20 09:25:17,028 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990790 is handled. Duration 360 ms by bot id=6246024647
+2023-11-20 09:25:43,140 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990791 is handled. Duration 210 ms by bot id=6246024647
+2023-11-20 09:25:45,106 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990792 is handled. Duration 119 ms by bot id=6246024647
+2023-11-20 09:28:41,641 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990793 is handled. Duration 213 ms by bot id=6246024647
+2023-11-20 09:29:45,378 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990794 is handled. Duration 302 ms by bot id=6246024647
+2023-11-20 09:29:48,022 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990795 is handled. Duration 157 ms by bot id=6246024647
+2023-11-20 09:31:34,433 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990796 is handled. Duration 192 ms by bot id=6246024647
+2023-11-20 09:32:29,252 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990797 is handled. Duration 432 ms by bot id=6246024647
+2023-11-20 09:32:31,686 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990798 is handled. Duration 362 ms by bot id=6246024647
+2023-11-20 09:32:52,423 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990799 is handled. Duration 270 ms by bot id=6246024647
+2023-11-20 09:32:55,091 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990800 is handled. Duration 129 ms by bot id=6246024647
+2023-11-20 09:32:56,521 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990801 is handled. Duration 126 ms by bot id=6246024647
+2023-11-20 09:32:59,095 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990802 is handled. Duration 147 ms by bot id=6246024647
+2023-11-20 09:33:04,115 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990803 is handled. Duration 126 ms by bot id=6246024647
+2023-11-20 09:33:21,851 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990804 is handled. Duration 230 ms by bot id=6246024647
+2023-11-20 09:33:23,734 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990805 is handled. Duration 144 ms by bot id=6246024647
+2023-11-20 09:33:31,081 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990806 is handled. Duration 150 ms by bot id=6246024647
+2023-11-20 09:33:34,001 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 09:33:34,001 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 09:33:34,001 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 09:33:35,648 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 09:33:35,950 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 09:33:35,991 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 09:33:38,809 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990807 is handled. Duration 146 ms by bot id=6246024647
+2023-11-20 09:33:53,959 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990808 is handled. Duration 296 ms by bot id=6246024647
+2023-11-20 09:33:59,186 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990809 is handled. Duration 73 ms by bot id=6246024647
+2023-11-20 09:34:48,517 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990810 is handled. Duration 268 ms by bot id=6246024647
+2023-11-20 09:34:50,621 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990811 is handled. Duration 77 ms by bot id=6246024647
+2023-11-20 09:36:06,865 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990812 is handled. Duration 401 ms by bot id=6246024647
+2023-11-20 09:36:12,987 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990813 is handled. Duration 167 ms by bot id=6246024647
+2023-11-20 09:36:15,855 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990814 is handled. Duration 122 ms by bot id=6246024647
+2023-11-20 09:36:20,666 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990815 is handled. Duration 75 ms by bot id=6246024647
+2023-11-20 09:36:42,648 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990816 is handled. Duration 461 ms by bot id=6246024647
+2023-11-20 09:36:43,877 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990817 is handled. Duration 175 ms by bot id=6246024647
+2023-11-20 09:36:49,620 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990818 is handled. Duration 370 ms by bot id=6246024647
+2023-11-20 09:36:51,895 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990819 is handled. Duration 94 ms by bot id=6246024647
+2023-11-20 09:37:22,107 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990820 is handled. Duration 297 ms by bot id=6246024647
+2023-11-20 09:40:59,203 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990821 is handled. Duration 234 ms by bot id=6246024647
+2023-11-20 09:41:15,894 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990822 is handled. Duration 238 ms by bot id=6246024647
+2023-11-20 09:41:20,136 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990823 is handled. Duration 324 ms by bot id=6246024647
+2023-11-20 09:41:32,036 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990824 is handled. Duration 158 ms by bot id=6246024647
+2023-11-20 09:41:33,761 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990825 is handled. Duration 175 ms by bot id=6246024647
+2023-11-20 10:19:38,057 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 10:19:38,057 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:19:38,057 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 10:19:39,735 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 10:19:39,967 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 10:19:40,011 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:24:57,380 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990826 is handled. Duration 312 ms by bot id=6246024647
+2023-11-20 10:26:02,087 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990827 is handled. Duration 250 ms by bot id=6246024647
+2023-11-20 10:26:03,897 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990828 is handled. Duration 91 ms by bot id=6246024647
+2023-11-20 10:26:30,102 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990829 is handled. Duration 167 ms by bot id=6246024647
+2023-11-20 10:27:20,024 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990830 is handled. Duration 275 ms by bot id=6246024647
+2023-11-20 10:28:19,326 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990831 is handled. Duration 188 ms by bot id=6246024647
+2023-11-20 10:28:22,488 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990832 is handled. Duration 131 ms by bot id=6246024647
+2023-11-20 10:28:30,090 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990833 is handled. Duration 230 ms by bot id=6246024647
+2023-11-20 10:30:19,611 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990834 is handled. Duration 283 ms by bot id=6246024647
+2023-11-20 10:30:31,996 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990835 is handled. Duration 147 ms by bot id=6246024647
+2023-11-20 10:30:33,774 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990836 is handled. Duration 194 ms by bot id=6246024647
+2023-11-20 10:30:44,000 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990837 is handled. Duration 209 ms by bot id=6246024647
+2023-11-20 10:31:24,364 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990838 is handled. Duration 479 ms by bot id=6246024647
+2023-11-20 10:31:58,653 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 10:31:58,654 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:31:58,654 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 10:32:00,348 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 10:32:00,811 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 10:32:00,849 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:32:46,619 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990839 is handled. Duration 331 ms by bot id=6246024647
+2023-11-20 10:32:55,857 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990840 is handled. Duration 149 ms by bot id=6246024647
+2023-11-20 10:33:00,608 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990841 is handled. Duration 168 ms by bot id=6246024647
+2023-11-20 10:33:09,753 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990842 is handled. Duration 275 ms by bot id=6246024647
+2023-11-20 10:41:32,411 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 10:41:32,411 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:41:32,411 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 10:41:34,086 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 10:41:34,349 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 10:41:34,400 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 10:46:58,434 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990843 is handled. Duration 298 ms by bot id=6246024647
+2023-11-20 10:47:40,922 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990844 is handled. Duration 170 ms by bot id=6246024647
+2023-11-20 10:47:47,690 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990845 is handled. Duration 120 ms by bot id=6246024647
+2023-11-20 10:47:54,529 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990846 is handled. Duration 131 ms by bot id=6246024647
+2023-11-20 10:48:04,629 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990847 is handled. Duration 276 ms by bot id=6246024647
+2023-11-20 10:48:48,387 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990848 is handled. Duration 233 ms by bot id=6246024647
+2023-11-20 10:48:50,085 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990849 is handled. Duration 172 ms by bot id=6246024647
+2023-11-20 10:49:00,121 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990850 is handled. Duration 210 ms by bot id=6246024647
+2023-11-20 10:49:02,499 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990851 is handled. Duration 204 ms by bot id=6246024647
+2023-11-20 10:55:52,393 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990852 is handled. Duration 231 ms by bot id=6246024647
+2023-11-20 10:56:33,336 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990853 is handled. Duration 265 ms by bot id=6246024647
+2023-11-20 11:06:34,791 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 11:06:34,792 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 11:06:34,792 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 11:06:36,464 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 11:06:36,912 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 11:06:36,952 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:20:24,953 - [ERROR] = aiogram.dispatcher - (dispatcher.py)._listen_updates(218) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2023-11-20 12:20:24,953 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._listen_updates(220) - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6246024647)
+2023-11-20 12:20:26,094 - [INFO] = aiogram.dispatcher - (dispatcher.py)._listen_updates(232) - Connection established (tryings = 1, bot id = 6246024647)
+2023-11-20 12:20:26,268 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990854 is handled. Duration 172 ms by bot id=6246024647
+2023-11-20 12:26:27,074 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 12:26:27,075 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:26:27,075 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 12:26:28,754 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 12:26:29,011 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 12:26:29,049 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:27:55,201 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 12:27:55,201 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:27:55,201 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 12:27:56,853 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 12:27:57,170 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 12:27:57,213 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:28:14,197 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990858 is handled. Duration 300 ms by bot id=6246024647
+2023-11-20 12:28:17,946 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990859 is handled. Duration 146 ms by bot id=6246024647
+2023-11-20 12:28:27,454 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 12:28:27,455 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:28:27,455 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-20 12:28:29,098 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-20 12:28:29,349 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-20 12:28:29,396 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 12:34:54,221 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990860 is handled. Duration 198 ms by bot id=6246024647
+2023-11-20 12:35:01,731 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990861 is handled. Duration 210 ms by bot id=6246024647
+2023-11-20 12:35:36,451 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990862 is handled. Duration 186 ms by bot id=6246024647
+2023-11-20 12:35:39,082 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990863 is handled. Duration 190 ms by bot id=6246024647
+2023-11-20 12:35:40,702 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990864 is handled. Duration 206 ms by bot id=6246024647
+2023-11-20 12:35:43,549 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990865 is handled. Duration 184 ms by bot id=6246024647
+2023-11-20 12:35:50,005 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990866 is handled. Duration 182 ms by bot id=6246024647
+2023-11-20 12:36:07,966 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990867 is handled. Duration 180 ms by bot id=6246024647
+2023-11-20 12:36:58,475 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990868 is handled. Duration 230 ms by bot id=6246024647
+2023-11-20 12:37:12,625 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990869 is handled. Duration 162 ms by bot id=6246024647
+2023-11-20 12:39:47,459 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990870 is handled. Duration 272 ms by bot id=6246024647
+2023-11-20 12:40:55,982 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990871 is handled. Duration 243 ms by bot id=6246024647
+2023-11-20 12:41:05,429 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990872 is handled. Duration 181 ms by bot id=6246024647
+2023-11-20 12:41:12,384 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990873 is handled. Duration 160 ms by bot id=6246024647
+2023-11-20 12:46:29,202 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990874 is handled. Duration 266 ms by bot id=6246024647
+2023-11-20 12:50:14,802 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990875 is handled. Duration 331 ms by bot id=6246024647
+2023-11-20 12:50:30,547 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990876 is handled. Duration 336 ms by bot id=6246024647
+2023-11-20 12:50:38,587 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990877 is handled. Duration 265 ms by bot id=6246024647
+2023-11-20 12:50:55,203 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990878 is handled. Duration 392 ms by bot id=6246024647
+2023-11-20 12:50:57,533 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990879 is handled. Duration 208 ms by bot id=6246024647
+2023-11-20 12:53:09,526 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990880 is handled. Duration 528 ms by bot id=6246024647
+2023-11-20 12:53:11,113 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990881 is handled. Duration 92 ms by bot id=6246024647
+2023-11-20 12:53:13,660 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990882 is handled. Duration 206 ms by bot id=6246024647
+2023-11-20 12:53:20,913 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990883 is handled. Duration 210 ms by bot id=6246024647
+2023-11-20 12:53:23,026 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990884 is handled. Duration 86 ms by bot id=6246024647
+2023-11-20 12:53:28,213 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990885 is handled. Duration 165 ms by bot id=6246024647
+2023-11-20 12:53:30,783 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990886 is handled. Duration 96 ms by bot id=6246024647
+2023-11-20 12:53:36,768 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990887 is handled. Duration 146 ms by bot id=6246024647
+2023-11-20 12:53:41,259 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990888 is handled. Duration 200 ms by bot id=6246024647
+2023-11-20 12:53:42,811 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990889 is handled. Duration 138 ms by bot id=6246024647
+2023-11-20 12:53:52,799 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990890 is handled. Duration 196 ms by bot id=6246024647
+2023-11-20 12:53:54,109 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990891 is handled. Duration 279 ms by bot id=6246024647
+2023-11-20 12:54:14,858 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990892 is handled. Duration 233 ms by bot id=6246024647
+2023-11-20 12:58:28,128 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990893 is handled. Duration 266 ms by bot id=6246024647
+2023-11-20 13:00:26,882 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990894 is handled. Duration 233 ms by bot id=6246024647
+2023-11-20 13:00:55,435 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990895 is handled. Duration 342 ms by bot id=6246024647
+2023-11-20 13:41:26,806 - [ERROR] = aiogram.dispatcher - (dispatcher.py)._listen_updates(218) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2023-11-20 13:41:26,806 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._listen_updates(220) - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6246024647)
+2023-11-20 13:41:27,978 - [INFO] = aiogram.dispatcher - (dispatcher.py)._listen_updates(232) - Connection established (tryings = 1, bot id = 6246024647)
+2023-11-20 13:41:28,173 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990899 is handled. Duration 193 ms by bot id=6246024647
+2023-11-20 13:42:04,418 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990900 is handled. Duration 244 ms by bot id=6246024647
+2023-11-20 13:43:03,918 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990901 is handled. Duration 417 ms by bot id=6246024647
+2023-11-20 13:43:10,216 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990902 is handled. Duration 206 ms by bot id=6246024647
+2023-11-20 13:43:14,582 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990903 is handled. Duration 150 ms by bot id=6246024647
+2023-11-20 13:43:16,617 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990904 is handled. Duration 139 ms by bot id=6246024647
+2023-11-20 13:43:33,807 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990905 is handled. Duration 223 ms by bot id=6246024647
+2023-11-20 13:43:35,842 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990906 is handled. Duration 164 ms by bot id=6246024647
+2023-11-20 13:57:21,291 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-20 13:57:21,291 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-20 13:57:21,291 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped

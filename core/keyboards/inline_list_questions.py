@@ -10,17 +10,16 @@ fac = InlineKeyboardMarkup(inline_keyboard=[
     ],
     [
         InlineKeyboardButton(
-            text="Я зарегистрировался на мероприятие.\n"
-                 "Когда придет письмо-подтверждение?",
+            text="Когда придет подтверждение?",
             callback_data="question_2"
         )
     ],
-[
-        InlineKeyboardButton(
-            text="Письмо-подтверждение моего участия в мероприятии так и не пришло.",
-            callback_data="question_3"
-        )
-    ],
+    # [
+    #     InlineKeyboardButton(
+    #         text="Письмо-подтверждение моего участия в мероприятии так и не пришло.",
+    #         callback_data="question_3"
+    #     )
+    # ],
     [
         InlineKeyboardButton(
             text="Где и во сколько состоится мероприятие?",
@@ -40,7 +39,7 @@ fac = InlineKeyboardMarkup(inline_keyboard=[
     ],
 [
         InlineKeyboardButton(
-            text="Back",
+            text="Назад",
             callback_data="click_back_in_main_menu"
         )
     ]
