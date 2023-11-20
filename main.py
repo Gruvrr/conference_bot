@@ -3,7 +3,7 @@ from datetime import datetime
 from aiogram import Bot, Dispatcher
 from core.handlers import get_start_handler
 from core.handlers.tomorrow_handler import send_conference_tomorrow
-from core.handlers.conference_today_handler import send_today_conference_message
+from core.handlers.conference_today_handler import send_today_conference_message_custom
 from core.settings import get_settings
 from core.handlers import (faq_handler,
                            questions_handler,
@@ -40,12 +40,12 @@ async def start():
                                   logging.StreamHandler()])
     bot = Bot(token=get_settings.bots.bot_token, parse_mode='HTML')
     scheduler = AsyncIOScheduler(timezone="Europe/Belgrade")
-    scheduler.add_job(send_conference_tomorrow, trigger='date', start_date=datetime(2023, 10, 28, 10, 30), kwargs={"bot": bot})
-    scheduler.add_job(send_today_conference_message, trigger='date,,,,', start_date=datetime(2023, 10, 29, 9, 30), kwargs={"bot": bot})
+    #scheduler.add_job(send_conference_tomorrow, args=[bot], trigger='date', run_date=datetime(2023, 10, 28, 10, 30))
+    #scheduler.add_job(send_today_conference_message_custom, args=[bot], trigger='date', run_date=datetime(2023, 10, 29, 9, 30))
     scheduler.start()
     dp.message.register(get_start_handler.get_start, Command("start"))
-    dp.message.register(tomorrow_handler.send_conference_tomorrow, Command("send_message1"))
-    dp.message.register(conference_today_handler.send_today_conference_message, Command("send_message2"))
+    dp.message.register(tomorrow_handler.send_conference_tomorrow_manual, Command("send_message1"))
+    dp.message.register(conference_today_handler.send_today_conference_message_manual, Command("send_message2"))
     dp.callback_query.register(get_start_handler.get_start, lambda c: c.data == "click_back_in_main_menu")
     dp.callback_query.register(questions_handler.question_1, lambda c: c.data == "question_1")
     dp.callback_query.register(questions_handler.question_2, lambda c: c.data == "question_2")

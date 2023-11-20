@@ -20,10 +20,10 @@ territory_keyboards12 = InlineKeyboardMarkup(inline_keyboard=[
 
 keyboard_12hr = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="Зал 1", callback_data="hall1_12hr")
+        InlineKeyboardButton(text="Зал 1", url='https://scienceplusbusiness.ru/9')
     ],
     [
-        InlineKeyboardButton(text="Зал 2", callback_data="hall2_12hr")
+        InlineKeyboardButton(text="Зал 2", url='https://scienceplusbusiness.ru/10')
     ],
     [
         InlineKeyboardButton(text="Назад", callback_data="12")
@@ -39,16 +39,16 @@ back_12hr_button = InlineKeyboardMarkup(inline_keyboard=[
 
 keyboard_12technobis = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="Зал 3", callback_data="hall3_12hr")
+        InlineKeyboardButton(text="Зал 3", url='https://scienceplusbusiness.ru/11')
     ],
     [
-        InlineKeyboardButton(text="Зал 4", callback_data="hall4_12hr")
+        InlineKeyboardButton(text="Зал 4", url='https://scienceplusbusiness.ru/12')
     ],
     [
-        InlineKeyboardButton(text="Зал 5", callback_data="hall5_12hr")
+        InlineKeyboardButton(text="Зал 5", url='https://scienceplusbusiness.ru/13')
     ],
     [
-        InlineKeyboardButton(text="Зал 6", callback_data="hall6_12hr")
+        InlineKeyboardButton(text="Зал 6", url='https://scienceplusbusiness.ru/14')
     ],
     [
         InlineKeyboardButton(text="Назад", callback_data="12")
@@ -66,10 +66,10 @@ back_12technobis_button = InlineKeyboardMarkup(inline_keyboard=[
 
 keyboard_12since = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="Зал 7", callback_data="hall7_12hr")
+        InlineKeyboardButton(text="Зал 7", url='https://scienceplusbusiness.ru/15')
     ],
     [
-        InlineKeyboardButton(text="Зал 8", callback_data="hall8_12hr")
+        InlineKeyboardButton(text="Зал 8", url='https://scienceplusbusiness.ru/16')
     ],
     [
         InlineKeyboardButton(text="Назад", callback_data="12")

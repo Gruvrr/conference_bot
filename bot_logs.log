@@ -32,3 +32,637 @@
 2023-10-27 19:42:07,743 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
 2023-10-27 19:42:07,744 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @antonTest12345_bot id=6400599755 - 'Antontestbot'
 2023-10-27 19:42:07,744 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:21:59,596 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:21:59,597 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:21:59,597 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:21:59,598 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:21:59,598 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:21:59,599 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job b7a0f0d1087a4988909ddd4b3f96468b
+2023-11-14 14:21:59,599 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 21c4fa3a828c4215b8fbf2f177bcce53
+2023-11-14 14:21:59,600 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 4:51:59.600622
+2023-11-14 14:21:59,600 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 4:51:59.600729
+2023-11-14 14:21:59,866 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:21:59,910 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:22:11,931 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990663 is handled. Duration 194 ms by bot id=6246024647
+2023-11-14 14:22:21,332 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990664 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:22:21,332 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990664 by bot id=6246024647
+TypeError: send_conference_tomorrow() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow() got multiple values for argument 'bot'
+2023-11-14 14:24:15,492 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:24:15,493 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:24:15,493 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:24:17,217 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:24:17,217 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:24:17,218 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:24:17,218 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:24:17,218 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:24:17,218 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 0b46f199afaf4e77aca8bf65634119c3
+2023-11-14 14:24:17,218 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 77cb516f59c24a2ea23ea26f92c5e256
+2023-11-14 14:24:17,218 - [ERROR] = apscheduler.executors.default - (base.py)._run_job_error(100) - Error running job 0b46f199afaf4e77aca8bf65634119c3
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/apscheduler/executors/base_py3.py", line 13, in run_coroutine_job
+    async def run_coroutine_job(job, jobstore_alias, run_times, logger_name):
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/apscheduler/executors/asyncio.py", line 38, in callback
+    events = f.result()
+asyncio.exceptions.CancelledError
+2023-11-14 14:24:17,219 - [ERROR] = apscheduler.executors.default - (base.py)._run_job_error(100) - Error running job 77cb516f59c24a2ea23ea26f92c5e256
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/apscheduler/executors/base_py3.py", line 13, in run_coroutine_job
+    async def run_coroutine_job(job, jobstore_alias, run_times, logger_name):
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/apscheduler/executors/asyncio.py", line 38, in callback
+    events = f.result()
+asyncio.exceptions.CancelledError
+2023-11-14 14:27:30,689 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:27:30,689 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:27:30,689 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:27:30,689 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:27:30,689 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:27:30,691 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 5767af4a51b34d00a1ab5dc5b0d845e4
+2023-11-14 14:27:30,691 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job ed0d4febbfda40c9a81a7d51e52de91c
+2023-11-14 14:27:30,692 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 4:57:30.692009
+2023-11-14 14:27:30,692 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 4:57:30.692183
+2023-11-14 14:27:30,934 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:27:30,977 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:27:33,346 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990665 is handled. Duration 168 ms by bot id=6246024647
+2023-11-14 14:27:35,850 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990666 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:27:35,850 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990666 by bot id=6246024647
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+2023-11-14 14:31:10,208 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:31:10,209 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:31:10,209 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:32:06,254 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:32:06,254 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:32:06,254 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:32:06,254 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:32:06,255 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:32:06,256 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 6603b31f97884215bcc7f598e5b2ea5c
+2023-11-14 14:32:06,256 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 1acdf521dee04000b85b213129ca9df2
+2023-11-14 14:32:06,257 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:02:06.257423
+2023-11-14 14:32:06,257 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:02:06.257545
+2023-11-14 14:32:06,570 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:32:06,641 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:32:10,401 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990667 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:32:10,401 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990667 by bot id=6246024647
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+2023-11-14 14:32:47,137 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:32:47,137 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:32:47,137 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:32:48,764 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:32:48,764 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:32:48,765 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:32:48,765 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:32:48,765 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:32:48,766 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 145b8569a25f494cb2fc2048d44dfad4
+2023-11-14 14:32:48,767 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 880d3887f5be464e86cbba8acdfb4827
+2023-11-14 14:32:48,767 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:02:48.767570
+2023-11-14 14:32:48,767 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:02:48.767723
+2023-11-14 14:32:48,972 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:32:49,011 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:32:55,129 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990668 is handled. Duration 209 ms by bot id=6246024647
+2023-11-14 14:32:56,465 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990669 is handled. Duration 344 ms by bot id=6246024647
+2023-11-14 14:33:07,941 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990670 is handled. Duration 217 ms by bot id=6246024647
+2023-11-14 14:33:52,025 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:33:52,026 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:33:52,026 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:33:53,663 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:33:53,663 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:33:53,664 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:33:53,664 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:33:53,664 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:33:53,666 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job e9b4257e60234b8db7699c6b6cfb6e97
+2023-11-14 14:33:53,666 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job d4c68eee7e0847a6b7867a84354f97da
+2023-11-14 14:33:53,667 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:03:53.667030
+2023-11-14 14:33:53,667 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:03:53.667152
+2023-11-14 14:33:53,897 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:33:53,941 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:34:04,909 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:34:04,909 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:34:04,910 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:34:06,588 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:34:06,589 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:34:06,589 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:34:06,589 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:34:06,589 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:34:06,591 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 86faf458ec5c4fb0a1b405cea6ee1b5c
+2023-11-14 14:34:06,591 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job b0726a0309d349ee9cf3226de7efaf32
+2023-11-14 14:34:06,592 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:04:06.592259
+2023-11-14 14:34:06,592 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:04:06.592377
+2023-11-14 14:34:06,907 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:34:06,956 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:34:13,060 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990671 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:34:13,061 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990671 by bot id=6246024647
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+2023-11-14 14:35:17,061 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:35:17,061 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:35:17,062 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:35:18,697 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:35:18,697 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:35:18,698 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:35:18,698 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:35:18,698 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:35:18,699 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 45abc0a0d6d84b3ba675dd135d20903d
+2023-11-14 14:35:18,700 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job bd582db7a80144d49aa0140a0639d2df
+2023-11-14 14:35:18,700 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:05:18.700588
+2023-11-14 14:35:18,700 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:05:18.700784
+2023-11-14 14:35:18,941 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:35:18,985 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:35:43,389 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990672 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:35:43,389 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990672 by bot id=6246024647
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+2023-11-14 14:37:45,121 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:37:45,122 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:37:45,122 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:37:46,767 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:37:46,767 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:37:46,768 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:37:46,768 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message" to job store "default"
+2023-11-14 14:37:46,768 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:37:46,769 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job df726c3a818e4e87b6ed8c88dd4f81e7
+2023-11-14 14:37:46,770 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job ecad48f0ba4b49efa4f619574f66e3f8
+2023-11-14 14:37:46,770 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:07:46.770676
+2023-11-14 14:37:46,770 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:07:46.770809
+2023-11-14 14:37:47,083 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:37:47,146 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:37:49,782 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990673 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:37:49,782 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990673 by bot id=6246024647
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_today_conference_message_manual() got multiple values for argument 'bot'
+2023-11-14 14:41:25,002 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:41:25,003 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:41:25,003 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:41:26,663 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:41:26,663 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:41:26,664 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:41:26,664 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message_custom" to job store "default"
+2023-11-14 14:41:26,664 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:41:26,665 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 72e24dc5038a40a5b150b03769723812
+2023-11-14 14:41:26,666 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job 96007dc352074126aee006d959897d52
+2023-11-14 14:41:26,666 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:11:26.666590
+2023-11-14 14:41:26,666 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message_custom (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:11:26.666786
+2023-11-14 14:41:26,891 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:41:26,932 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:45:27,266 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990674 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:45:27,267 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990674 by bot id=6246024647
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+2023-11-14 14:45:42,829 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:45:42,829 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:45:42,829 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:45:44,449 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:45:44,449 - [INFO] = apscheduler.scheduler - (base.py).add_job(454) - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-11-14 14:45:44,449 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_conference_tomorrow" to job store "default"
+2023-11-14 14:45:44,449 - [INFO] = apscheduler.scheduler - (base.py)._real_add_job(895) - Added job "send_today_conference_message_custom" to job store "default"
+2023-11-14 14:45:44,449 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:45:44,451 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job e7e67d4792784b4b9297e33b6a1e914e
+2023-11-14 14:45:44,451 - [INFO] = apscheduler.scheduler - (base.py).remove_job(641) - Removed job cec2df066fb94f52952894fbdefe0d51
+2023-11-14 14:45:44,451 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_conference_tomorrow (trigger: date[2023-10-28 10:30:00 CEST], next run at: 2023-10-28 10:30:00 CEST)" was missed by 17 days, 5:15:44.451964
+2023-11-14 14:45:44,452 - [WARNING] = apscheduler.executors.default - (base_py3.py).run_coroutine_job(25) - Run time of job "send_today_conference_message_custom (trigger: date[2023-10-29 09:30:00 CET], next run at: 2023-10-29 09:30:00 CET)" was missed by 16 days, 5:15:44.452074
+2023-11-14 14:45:44,684 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:45:44,725 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:46:12,553 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:46:12,553 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:46:12,553 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:46:14,166 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:46:14,423 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:46:14,461 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:46:22,400 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990675 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:46:22,400 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990675 by bot id=6246024647
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+2023-11-14 14:46:42,401 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:46:42,402 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:46:42,402 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:46:53,997 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:46:54,215 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:46:54,254 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:47:00,463 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990676 is not handled. Duration 0 ms by bot id=6246024647
+2023-11-14 14:47:00,463 - [ERROR] = aiogram.event - (dispatcher.py)._process_update(314) - Cause exception while process update id=982990676 by bot id=6246024647
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+Traceback (most recent call last):
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 308, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/anton/PycharmProjects/conference_bot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+TypeError: send_conference_tomorrow_manual() got multiple values for argument 'bot'
+2023-11-14 14:47:59,631 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:47:59,632 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:47:59,632 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-14 14:48:27,026 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-14 14:48:27,254 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-14 14:48:27,309 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:48:30,652 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990677 is handled. Duration 250 ms by bot id=6246024647
+2023-11-14 14:48:31,829 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990678 is handled. Duration 158 ms by bot id=6246024647
+2023-11-14 14:48:36,623 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990679 is handled. Duration 195 ms by bot id=6246024647
+2023-11-14 14:48:38,595 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990680 is handled. Duration 154 ms by bot id=6246024647
+2023-11-14 14:48:41,082 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990681 is handled. Duration 223 ms by bot id=6246024647
+2023-11-14 14:48:43,027 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990682 is handled. Duration 223 ms by bot id=6246024647
+2023-11-14 14:48:44,202 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990683 is handled. Duration 148 ms by bot id=6246024647
+2023-11-14 14:48:45,681 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990684 is handled. Duration 374 ms by bot id=6246024647
+2023-11-14 14:48:46,643 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990685 is handled. Duration 256 ms by bot id=6246024647
+2023-11-14 14:48:47,819 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990686 is handled. Duration 136 ms by bot id=6246024647
+2023-11-14 14:48:48,744 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990687 is handled. Duration 141 ms by bot id=6246024647
+2023-11-14 14:48:51,113 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990688 is handled. Duration 86 ms by bot id=6246024647
+2023-11-14 14:48:52,914 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990689 is handled. Duration 190 ms by bot id=6246024647
+2023-11-14 14:48:54,849 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990690 is handled. Duration 200 ms by bot id=6246024647
+2023-11-14 14:49:16,755 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-14 14:49:16,756 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-14 14:49:16,756 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-15 11:59:22,964 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-15 11:59:23,256 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-15 11:59:23,301 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-15 12:25:54,070 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990691 is handled. Duration 357 ms by bot id=6246024647
+2023-11-15 12:26:04,956 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990692 is handled. Duration 203 ms by bot id=6246024647
+2023-11-15 13:28:13,563 - [ERROR] = aiogram.dispatcher - (dispatcher.py)._listen_updates(218) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2023-11-15 13:28:13,563 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._listen_updates(220) - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6246024647)
+2023-11-15 13:28:24,717 - [INFO] = aiogram.dispatcher - (dispatcher.py)._listen_updates(232) - Connection established (tryings = 1, bot id = 6246024647)
+2023-11-15 13:43:10,572 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990693 is handled. Duration 211 ms by bot id=6246024647
+2023-11-15 13:43:20,569 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990694 is handled. Duration 157 ms by bot id=6246024647
+2023-11-15 13:44:11,036 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990695 is handled. Duration 344 ms by bot id=6246024647
+2023-11-15 13:44:17,646 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990696 is handled. Duration 144 ms by bot id=6246024647
+2023-11-15 13:44:19,075 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990697 is handled. Duration 129 ms by bot id=6246024647
+2023-11-15 13:44:25,090 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990698 is handled. Duration 237 ms by bot id=6246024647
+2023-11-15 13:44:27,180 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990699 is handled. Duration 159 ms by bot id=6246024647
+2023-11-15 13:45:08,325 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990700 is handled. Duration 258 ms by bot id=6246024647
+2023-11-15 13:45:10,442 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990701 is handled. Duration 150 ms by bot id=6246024647
+2023-11-15 13:47:43,421 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990702 is handled. Duration 375 ms by bot id=6246024647
+2023-11-15 13:47:45,060 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990703 is handled. Duration 321 ms by bot id=6246024647
+2023-11-15 13:47:52,319 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990704 is handled. Duration 158 ms by bot id=6246024647
+2023-11-15 13:48:12,905 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990705 is handled. Duration 411 ms by bot id=6246024647
+2023-11-15 13:48:15,214 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990706 is handled. Duration 140 ms by bot id=6246024647
+2023-11-15 13:48:19,427 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990707 is handled. Duration 362 ms by bot id=6246024647
+2023-11-15 13:48:26,214 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990708 is handled. Duration 82 ms by bot id=6246024647
+2023-11-15 13:48:42,838 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990709 is handled. Duration 235 ms by bot id=6246024647
+2023-11-15 13:49:23,959 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990710 is handled. Duration 250 ms by bot id=6246024647
+2023-11-15 13:50:30,704 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990711 is handled. Duration 181 ms by bot id=6246024647
+2023-11-15 13:50:32,581 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990712 is handled. Duration 231 ms by bot id=6246024647
+2023-11-15 13:50:49,198 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990713 is handled. Duration 297 ms by bot id=6246024647
+2023-11-15 13:51:03,656 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990714 is handled. Duration 174 ms by bot id=6246024647
+2023-11-15 13:51:05,963 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990715 is handled. Duration 112 ms by bot id=6246024647
+2023-11-15 13:51:07,870 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990716 is handled. Duration 146 ms by bot id=6246024647
+2023-11-15 13:51:13,513 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990717 is handled. Duration 322 ms by bot id=6246024647
+2023-11-15 13:51:15,360 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990718 is handled. Duration 319 ms by bot id=6246024647
+2023-11-15 13:57:47,650 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990719 is handled. Duration 253 ms by bot id=6246024647
+2023-11-15 13:57:49,186 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990720 is handled. Duration 138 ms by bot id=6246024647
+2023-11-15 13:59:04,958 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990721 is handled. Duration 350 ms by bot id=6246024647
+2023-11-15 13:59:09,083 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990722 is handled. Duration 285 ms by bot id=6246024647
+2023-11-15 13:59:10,801 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990723 is handled. Duration 188 ms by bot id=6246024647
+2023-11-15 13:59:15,178 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990724 is handled. Duration 138 ms by bot id=6246024647
+2023-11-15 13:59:16,691 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990725 is handled. Duration 162 ms by bot id=6246024647
+2023-11-15 14:00:46,597 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990726 is handled. Duration 221 ms by bot id=6246024647
+2023-11-15 14:02:59,600 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990727 is handled. Duration 234 ms by bot id=6246024647
+2023-11-15 14:07:47,564 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990728 is handled. Duration 255 ms by bot id=6246024647
+2023-11-15 14:40:55,658 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-15 14:40:55,659 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-15 14:40:55,659 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-16 10:05:25,401 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-16 10:05:25,709 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-16 10:05:25,750 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 10:05:25,998 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990730 is handled. Duration 168 ms by bot id=6246024647
+2023-11-16 10:05:25,999 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990729 is handled. Duration 179 ms by bot id=6246024647
+2023-11-16 10:05:39,386 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990731 is handled. Duration 143 ms by bot id=6246024647
+2023-11-16 10:07:56,108 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-16 10:07:56,108 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 10:07:56,108 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-16 10:08:08,175 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-16 10:08:08,428 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-16 10:08:08,470 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 10:08:14,470 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990732 is handled. Duration 200 ms by bot id=6246024647
+2023-11-16 10:10:47,402 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990733 is handled. Duration 257 ms by bot id=6246024647
+2023-11-16 10:10:49,610 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990734 is handled. Duration 99 ms by bot id=6246024647
+2023-11-16 10:11:12,083 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990735 is handled. Duration 236 ms by bot id=6246024647
+2023-11-16 10:22:34,360 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-16 10:22:34,360 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 10:22:34,361 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-16 11:54:03,070 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-16 11:54:03,323 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-16 11:54:03,360 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 11:55:29,210 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990736 is handled. Duration 331 ms by bot id=6246024647
+2023-11-16 11:55:31,158 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990737 is handled. Duration 154 ms by bot id=6246024647
+2023-11-16 11:56:55,293 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990738 is handled. Duration 681 ms by bot id=6246024647
+2023-11-16 11:56:57,698 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990739 is handled. Duration 432 ms by bot id=6246024647
+2023-11-16 11:57:21,902 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990740 is handled. Duration 240 ms by bot id=6246024647
+2023-11-16 11:57:24,310 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990741 is handled. Duration 136 ms by bot id=6246024647
+2023-11-16 11:57:26,154 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990742 is handled. Duration 243 ms by bot id=6246024647
+2023-11-16 12:44:30,525 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-16 12:44:30,525 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 12:44:30,525 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-16 12:44:32,262 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-16 12:44:32,529 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-16 12:44:32,579 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 12:57:47,365 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990743 is handled. Duration 191 ms by bot id=6246024647
+2023-11-16 13:10:36,367 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990744 is handled. Duration 250 ms by bot id=6246024647
+2023-11-16 13:10:41,392 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990745 is handled. Duration 143 ms by bot id=6246024647
+2023-11-16 13:10:43,130 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990746 is handled. Duration 151 ms by bot id=6246024647
+2023-11-16 13:10:46,767 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990747 is handled. Duration 99 ms by bot id=6246024647
+2023-11-16 13:10:53,679 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990748 is handled. Duration 95 ms by bot id=6246024647
+2023-11-16 13:10:57,195 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990749 is handled. Duration 197 ms by bot id=6246024647
+2023-11-16 13:12:21,884 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990750 is handled. Duration 191 ms by bot id=6246024647
+2023-11-16 13:12:25,431 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990751 is handled. Duration 133 ms by bot id=6246024647
+2023-11-16 13:12:30,525 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990752 is handled. Duration 120 ms by bot id=6246024647
+2023-11-16 13:12:32,795 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990753 is handled. Duration 150 ms by bot id=6246024647
+2023-11-16 13:12:47,957 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990754 is handled. Duration 197 ms by bot id=6246024647
+2023-11-16 13:12:54,027 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990755 is handled. Duration 200 ms by bot id=6246024647
+2023-11-16 13:13:30,684 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990756 is handled. Duration 193 ms by bot id=6246024647
+2023-11-16 13:13:37,522 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990757 is handled. Duration 166 ms by bot id=6246024647
+2023-11-16 13:13:51,450 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990758 is handled. Duration 278 ms by bot id=6246024647
+2023-11-16 13:14:05,996 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990759 is handled. Duration 76 ms by bot id=6246024647
+2023-11-16 13:14:18,490 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990760 is handled. Duration 150 ms by bot id=6246024647
+2023-11-16 13:14:22,121 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990761 is handled. Duration 86 ms by bot id=6246024647
+2023-11-16 13:17:46,612 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990762 is handled. Duration 306 ms by bot id=6246024647
+2023-11-16 13:18:05,510 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990763 is handled. Duration 199 ms by bot id=6246024647
+2023-11-16 13:18:34,150 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990764 is handled. Duration 249 ms by bot id=6246024647
+2023-11-16 13:18:39,294 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990765 is handled. Duration 200 ms by bot id=6246024647
+2023-11-16 13:19:35,359 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990766 is handled. Duration 484 ms by bot id=6246024647
+2023-11-16 13:20:03,132 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990767 is handled. Duration 177 ms by bot id=6246024647
+2023-11-16 15:39:26,594 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-16 15:39:26,594 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-16 15:39:26,594 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-17 13:04:17,339 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-17 13:04:17,642 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-17 13:04:17,688 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 13:04:22,607 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990768 is handled. Duration 209 ms by bot id=6246024647
+2023-11-17 13:04:23,804 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990769 is handled. Duration 162 ms by bot id=6246024647
+2023-11-17 13:04:24,966 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990770 is handled. Duration 209 ms by bot id=6246024647
+2023-11-17 13:04:45,576 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990771 is handled. Duration 259 ms by bot id=6246024647
+2023-11-17 13:05:46,159 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGTERM signal
+2023-11-17 13:05:46,159 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 13:05:46,159 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-17 13:33:32,532 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-17 13:33:32,922 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-17 13:33:32,996 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 13:47:27,197 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990772 is handled. Duration 255 ms by bot id=6246024647
+2023-11-17 13:47:30,869 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990773 is handled. Duration 198 ms by bot id=6246024647
+2023-11-17 13:47:37,127 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990774 is handled. Duration 154 ms by bot id=6246024647
+2023-11-17 13:47:40,218 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990775 is handled. Duration 191 ms by bot id=6246024647
+2023-11-17 13:53:13,268 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990776 is handled. Duration 486 ms by bot id=6246024647
+2023-11-17 13:53:16,716 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990777 is handled. Duration 463 ms by bot id=6246024647
+2023-11-17 13:57:44,183 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990778 is handled. Duration 219 ms by bot id=6246024647
+2023-11-17 13:58:20,323 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990779 is handled. Duration 206 ms by bot id=6246024647
+2023-11-17 14:02:10,029 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990780 is handled. Duration 227 ms by bot id=6246024647
+2023-11-17 14:02:43,469 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990781 is handled. Duration 300 ms by bot id=6246024647
+2023-11-17 14:02:45,504 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990782 is handled. Duration 217 ms by bot id=6246024647
+2023-11-17 14:02:56,345 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990783 is handled. Duration 268 ms by bot id=6246024647
+2023-11-17 14:03:04,695 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990784 is handled. Duration 79 ms by bot id=6246024647
+2023-11-17 14:04:12,413 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990785 is handled. Duration 210 ms by bot id=6246024647
+2023-11-17 14:10:26,111 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGINT signal
+2023-11-17 14:10:26,112 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 14:10:26,112 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped
+2023-11-17 14:10:27,755 - [INFO] = apscheduler.scheduler - (base.py).start(181) - Scheduler started
+2023-11-17 14:10:27,995 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(524) - Start polling
+2023-11-17 14:10:28,042 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(340) - Run polling for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 14:10:35,989 - [INFO] = aiogram.event - (dispatcher.py).feed_update(171) - Update id=982990786 is handled. Duration 158 ms by bot id=6246024647
+2023-11-17 15:48:48,017 - [WARNING] = aiogram.dispatcher - (dispatcher.py)._signal_stop_polling(452) - Received SIGTERM signal
+2023-11-17 15:48:48,017 - [INFO] = aiogram.dispatcher - (dispatcher.py)._polling(356) - Polling stopped for bot @X_Congress_Innopraktika_bot id=6246024647 - '10Congress_Innopraktika'
+2023-11-17 15:48:48,018 - [INFO] = aiogram.dispatcher - (dispatcher.py).start_polling(551) - Polling stopped

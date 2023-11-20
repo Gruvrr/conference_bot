@@ -16,16 +16,16 @@ async def choice_session(callback: CallbackQuery):
 @router.callback_query(lambda c: c.data == "10")
 async def choice_time_10(callback: CallbackQuery):
     await callback.message.answer(text=f"Первая сессия начинается в 10 часов.\n"
-                                       f"Для вашего удобства мы разделили залы по направлениям.\n"
-                                       f"Выберете интересующее вас направление", reply_markup=territory_keyboards10)
+                                       f"Для вашего удобства мы разделили залы по территориям.\n"
+                                       f"Выберете интересующее вас территорию", reply_markup=territory_keyboards10)
     await callback.answer()
 
 
 @router.callback_query(lambda c: c.data == "12")
 async def choice_time_12(callback: CallbackQuery):
     await callback.message.answer(text=f"Вторая сессия начинается в 12 часов.\n"
-                                       f"Для вашего удобства мы разделили залы по направлениям.\n"
-                                       f" Выберете интересующее вас направление", reply_markup=territory_keyboards12)
+                                       f"Для вашего удобства мы разделили залы по территориям.\n"
+                                       f" Выберете интересующее вас территорию", reply_markup=territory_keyboards12)
     await callback.answer()
 
 

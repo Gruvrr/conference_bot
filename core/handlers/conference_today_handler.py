@@ -7,13 +7,13 @@ from aiogram import Bot
 
 
 async def send_today_conference_callback(callback: CallbackQuery):
-    await callback.message.answer(text=f"Сегодня мероприятие.\n"
-                                       f"Ниже вы можете ознакомится в подробной программой и расписанием.",
+    await callback.message.answer(text=f"Приветствуем вас на X Конгрессе! \n"
+                                        f"Ниже вы можете ознакомиться с подробной программой и расписанием сессией.",
                                   reply_markup=event_keyboard_13_dec.keyboard)
     await callback.answer()
 
 
-async def send_today_conference_message(bot: Bot):
+async def send_today_conference_message_custom(bot: Bot):
     admin_id = int(settings.get_settings.bots.admin_id)
     connection = psycopg2.connect(
         host=db_settings.host,
@@ -30,8 +30,39 @@ async def send_today_conference_message(bot: Bot):
             for user in users:
                 user_id = user[0]
                 try:
-                    await bot.send_message(user_id, text=f"Сегодня мероприятие.\n"
-                                                                f"Ниже вы можете ознакомится в подробной программой и расписанием.",
+                    await bot.send_message(user_id, text=f"Приветствуем вас на X Конгрессе! \n"
+                                                         f"Ниже вы можете ознакомиться с подробной программой и расписанием сессией.",
+                                                   reply_markup=event_keyboard_13_dec.keyboard)
+                    sent_count += 1
+                except Exception as e:
+                    print(f"Failed to send message to user_id {user_id}. Error: {e}")
+
+        await bot.send_message(admin_id, text=f"Уведомления успешно отправлены! Отправлено сообщений: {sent_count}")
+    except Exception as _ex:
+        print(["[INFO] Error exception ", _ex])
+    finally:
+        connection.close()
+
+
+async def send_today_conference_message_manual(message: Message, bot: Bot):
+    admin_id = int(settings.get_settings.bots.admin_id)
+    connection = psycopg2.connect(
+        host=db_settings.host,
+        user=db_settings.user,
+        password=db_settings.password,
+        database=db_settings.db_name
+    )
+    sent_count = 0
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT user_id FROM users")
+            users = cursor.fetchall()
+
+            for user in users:
+                user_id = user[0]
+                try:
+                    await bot.send_message(user_id, text=f"Приветствуем вас на X Конгрессе! \n"
+                                                         f"Ниже вы можете ознакомиться с подробной программой и расписанием сессией.",
                                                    reply_markup=event_keyboard_13_dec.keyboard)
                     sent_count += 1
                 except Exception as e:

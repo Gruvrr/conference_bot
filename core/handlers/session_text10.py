@@ -8,7 +8,7 @@ router = Router()
 @router.callback_query(lambda c: c.data == "hr10")
 async def hr10(callback: CallbackQuery):
     await callback.message.answer(text=f"Вы выбрали HR-территорию.\n"
-                                       f"Под это направление работает 2 зала.", reply_markup=keyboard_10hr)
+                                       f"В данной территории работают 2 зала.\n", reply_markup=keyboard_10hr)
 
 
 @router.callback_query(lambda c: c.data == "hall1_10hr")
