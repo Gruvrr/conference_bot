@@ -50,7 +50,7 @@ async def question_5(callback: CallbackQuery):
     await callback.message.answer(text=f"Добрый день, {name}! \n"
                                        f"Подробная информация об аккредитации СМИ будет представлена \n"
                                        f"на сайте мероприятия: https://scienceplusbusiness.ru/ \n"
-                                       f"в разделе «Пресс-центр».", reply_markup=back)
+                                       f"в разделе «Пресс-центр», в начале декабря.", reply_markup=back)
     await callback.answer()
 
 
