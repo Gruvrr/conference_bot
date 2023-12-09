@@ -58,7 +58,9 @@ async def send_conference_tomorrow_manual(message: Message, bot: Bot):
             for user in users:
                 user_id = user[0]
                 try:
-                    await bot.send_message(user_id, "Завтра мероприятие")
+                    await bot.send_message(user_id, 'Ждём вас завтра на Конгрессе "Наука+Бизнес", регистрация '
+                                                    'откроется в 9.30, не забудьте, пожалуйста, паспорт.\n '
+                                                    'Ссылка на контакты https://scienceplusbusiness.ru/2023#contacts')
                     sent_count += 1
                 except Exception as e:
                     print(f"Failed to send message to user_id {user_id}. Error: {e}")

@@ -45,12 +45,11 @@ async def question_4(callback: CallbackQuery):
                                        f"будет доступна в этом чат-боте. ", reply_markup=back)
     await callback.answer()
 
+
 async def question_5(callback: CallbackQuery):
     name = callback.from_user.first_name
-    await callback.message.answer(text=f"Добрый день, {name}! \n"
-                                       f"Подробная информация об аккредитации СМИ будет представлена \n"
-                                       f"на сайте мероприятия: https://scienceplusbusiness.ru/ \n"
-                                       f"в разделе «Пресс-центр», в начале декабря.", reply_markup=back)
+    await callback.message.answer(text=f"Спасибо за проявленный интерес к мероприятию, аккредитация СМИ "
+                                       f'закрыта! Перейти в раздел "Пресс-центр": ссылка https://scienceplusbusiness.ru/2023#press', reply_markup=back)
     await callback.answer()
 
 
